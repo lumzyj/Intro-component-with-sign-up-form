@@ -88,6 +88,11 @@ input {
 
 input.error {
   border: 1px solid var(--red);
+  background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="red" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle"%3e%3ccircle cx="12" cy="12" r="10" fill="red"/%3e%3cline x1="12" y1="8" x2="12" y2="12"/%3e%3cline x1="12" y1="16" x2="12.01" y2="16"/%3e%3c/svg%3e');
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.5rem;
+  padding-right: 3rem; /* Adjust padding to ensure the icon does not overlap text */
 }
 
 input:hover,
@@ -109,6 +114,10 @@ button {
   margin-bottom: 1rem;
 }
 
+/* button:hover{
+  background-color: ;
+} */
+
 small {
   display: flex;
   align-items: center;
@@ -121,4 +130,56 @@ small span {
   color: var(--red);
   font-weight: 600;
   cursor: pointer;
+}
+
+.error-message {
+  color: var(--red);
+  font-size: 16px;
+  font-weight: 400, 500, 600, 700;
+  margin-top: -0.75rem;
+  margin-bottom: 1rem;
+  float: right;
+  
+}
+input:focus.error {
+  outline: 1.5px solid var(--red);
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; 
+  }
+
+  h1 {
+    font-size: px;
+    text-align: center; 
+  }
+
+  p {
+    font-size: 16px;
+    text-align: center; 
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+
+  button {
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+  }
+  small span {
+    text-align: center;
+   
+    
+  }
 }
